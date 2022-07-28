@@ -3,9 +3,15 @@ function receivesAFunction(cb) {
 }
 
 function returnsANamedFunction() {
-  let boop = (function goodness(tooMuch) {
+  function goodness(tooMuch) {
     tooMuch * 2;
-  }) 
-  return boop
+  } 
+  return goodness
 }
 
+
+function returnsAnAnonymousFunction() {
+  return function () {
+    'boop'
+  }
+}
