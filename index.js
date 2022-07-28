@@ -2,6 +2,10 @@ function receivesAFunction(cb) {
   return cb();
 }
 
-let thisOne = function returnsANamedFunction() {
-  return returnsANamedFunction();
+function returnsANamedFunction() {
+  let boop = (function goodness(tooMuch) {
+    tooMuch * 2;
+  }) 
+  return boop
 }
+
